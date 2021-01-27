@@ -7,7 +7,7 @@ services:
         expose:
             - "80"
         environment:
-            - VIRTUAL_HOST=contact.moviedo.rigidcode.com,www.contact.moviedo.rigidcode.com
+            - VIRTUAL_HOST=manueloviedo.com.mx,www.manueloviedo.com.mx,contact.moviedo.rigidcode.com,www.contact.moviedo.rigidcode.com
             - VIRTUAL_PORT=80
             - LETSENCRYPT_HOST=rigidcode.com
             - LETSENCRYPT_EMAIL=admin@rigicode.com
