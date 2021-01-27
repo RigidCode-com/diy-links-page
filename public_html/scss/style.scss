@@ -1,19 +1,11 @@
-@mixin dots($count) {
-    $text-shadow: ();
-    @for $i from 0 through $count {
-        $text-shadow: $text-shadow,
-                    (-.5+(random()) * 3) + em
-                    (-.5+(random()) * 3) + em
-                    7px
-                    hsla(random() * 360, 100%, 50%,.9);
-    }
-    text-shadow: $text-shadow;
-}
-
 html {
     font: 5vmin/1.3 Serif;
     overflow: auto;
-    background: #123;
+    background: url('../img/background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body, head {
@@ -25,62 +17,50 @@ body, head {
 body {
     text-align: center;
     margin-top: 100px;
+    width: 50%;
 }
 
 .logo {
     width: 120px;
 }
 
+.hidden {
+    display: none;
+}
+
 h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     text-transform: uppercase;
-    font-weight: normal;
+    font-weight: bold;
     letter-spacing: 2px;
-    color: #ffffff;
+    color: #585757;
     margin: 0px 0px 12px;
+}
+
+.tooltip {
+    font-weight: normal !important;
+    position: absolute;
+    right: 12%;
+    top: 65%;
+    color: rgb(255, 255, 255);
 }
 
 head::before, head::after,
 body::before, body::after {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 10%;
     width: 3em;
     height: 3em;
     content: '.';
     mix-blend-mode: screen;
-    animation: 44s -27s move infinite ease-in-out alternate;
-}
-
-body::before {
-    @include dots(40);
-    animation-duration: 128s;
-    animation-delay: -36s;
-}
-
-body::after {
-    @include dots(40);
-    animation-duration: 126s;
-    animation-delay: -40s;
-}
-
-head::before {
-    @include dots(40);
-    animation-duration: 124s;
-    animation-delay: -34s;
-}
-
-head::after {
-    @include dots(40);
-    animation-duration: 122s;
-    animation-delay: -27s;
 }
 
 a {    
     &:hover {
         background-color: #11223361 !important;
-        color: #ffffff !important;
+        color: #585757 !important;
         font-size: 1.65rem !important;
     }
 }
@@ -93,14 +73,14 @@ a {
     margin: 0 auto 15px auto;
     padding: 15px 20px;
     font-size: 1.5rem;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: #585757;
+    border: 2px solid #888888;
     text-decoration: none;
     transition: all 200ms ease-in-out;
     
     &.featured {
         position: relative;
-        background-color: #ffffff;
+        background-color: #585757;
         color: #060042;
         font-weight: bold;
 
@@ -113,14 +93,5 @@ a {
             height: calc(100% - 4px);
             border: 2px solid #060042;
         }
-    }
-}
-
-@keyframes move {
-    from {
-        transform: rotate(0deg) scale(12) translateX(-20px);
-    }
-    to {
-        transform: rotate(360deg) scale(18) translateX(20px);
     }
 }

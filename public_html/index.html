@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>My directory  |  RigidCode</title>
+        <title>Manuel Oviedo | Contact</title>
         <link rel="icon" type="image/png" href="img/directory.png">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
@@ -17,10 +17,55 @@
         <!-- Popular Content -->
         <h2>Let's get in touch</h2>
 
-        <a href="https://www.linkedin.com/in/jos%C3%A9-manuel-oviedo-guzm%C3%A1n-628191163" title="About me!"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/ManuelOviedo" title="My contributions"><i class="fab fa-github"></i></a>
-        <a href="tel:+52-312-140-5054" title="My number"><i class="fas fa-phone"></i></a>
-        <a href="mailto:jose.manuel.oviedo.guzman@gmail.com" title="My e-mail"><i class="fas fa-at"></i></a>
-        
+        <a id="aboutMe" href="https://www.linkedin.com/in/jos%C3%A9-manuel-oviedo-guzm%C3%A1n-628191163"><i class="fab fa-linkedin"></i></a>
+        <a id="gitHub" href="https://github.com/ManuelOviedo"><i class="fab fa-github"></i></a>
+        <a id="phone" href="tel:+52-1-312-140-5054"><i class="fas fa-phone"></i></a>
+        <a id="mail" href="mailto:jose.manuel.oviedo.guzman@gmail.com"><i class="fas fa-at"></i></a>
+        <h2 class="tooltip hidden"></h2>
+
+        <script type="text/javascript">
+            let aboutMe = document.getElementById('aboutMe');
+            let gitHub = document.getElementById('gitHub');
+            let phone = document.getElementById('phone');
+            let mail = document.getElementById('mail');
+            let tooltip = document.getElementsByClassName('tooltip')[0];
+            
+            aboutMe.onmouseover = () => {
+                tooltip.innerHTML = 'About me';
+                tooltip.classList.remove('hidden');
+            }
+            aboutMe.onmouseleave = () => {
+                tooltip.innerHTML = '';
+                tooltip.classList.add('hidden');
+            }
+
+            gitHub.onmouseover = () => {
+                tooltip.innerHTML = 'My Github';
+                tooltip.classList.remove('hidden');
+            }
+            gitHub.onmouseleave = () => {
+                tooltip.innerHTML = '';
+                tooltip.classList.add('hidden');
+            }
+
+            phone.onmouseover = () => {
+                tooltip.innerHTML = 'Call me!';
+                tooltip.classList.remove('hidden');
+            }
+            phone.onmouseleave = () => {
+                tooltip.innerHTML = '';
+                tooltip.classList.add('hidden');
+            }
+
+            mail.onmouseover = () => {
+                tooltip.innerHTML = 'Email me!';
+                tooltip.classList.remove('hidden');
+            }
+            mail.onmouseleave = () => {
+                tooltip.innerHTML = '';
+                tooltip.classList.add('hidden');
+            }
+
+        </script>
     </body>
 </html>
