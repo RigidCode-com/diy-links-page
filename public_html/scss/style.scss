@@ -16,7 +16,7 @@ body, head {
 
 body {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 80px;
     width: 50%;
 }
 
@@ -41,7 +41,7 @@ h2 {
 .tooltip {
     font-weight: normal !important;
     position: absolute;
-    right: 12%;
+    right: 10%;
     top: 65%;
     color: rgb(255, 255, 255);
 }
@@ -93,5 +93,86 @@ a {
             height: calc(100% - 4px);
             border: 2px solid #060042;
         }
+    }
+}
+
+/* Extra small devices (phones, 454px and down) */
+@media only screen and (max-width: 454px) {
+    body {
+        margin-top: 5px;
+        margin-left: 15%;
+    }
+
+    .tooltip {
+        font-weight: normal !important;
+        position: inherit;
+        color: #585757;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body {
+        margin-top: 5px;
+        margin-left: 10%;
+    }
+
+    .tooltip {
+        position: inherit;
+        margin-top: 26%;
+        color: #292929;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    body {
+        margin-top: 5px;
+        margin-left: 10%;
+    }
+
+    .tooltip {
+        position: inherit;
+        margin-top: 20%;
+        color: #292929;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    body {
+        margin-top: 5px;
+        margin-left: 10%;
+    }
+
+    .tooltip {
+        position: inherit;
+        margin-top: 31%;
+        color: #292929;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    body {
+        margin-top: 5px;
+        margin-left: 8%;
+    }
+
+    .tooltip {
+        right: 4%;
+        top: 60%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    body {
+        margin-top: 80px;
+        margin-left: 5%;
+    }
+
+    .tooltip {
+        top: 60%;
     }
 }
